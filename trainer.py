@@ -59,8 +59,8 @@ class MyEngine(Engine):
         else:
             accuracy = 0
 
-        p_norm = float(get_parameter_norm(engine.model.parameters()))
-        g_norm = float(get_grad_norm(engine.model.parameters()))
+        p_norm = float(get_parameter_norm(engine.model.parameters())) # 커지면 학습 되는중
+        g_norm = float(get_grad_norm(engine.model.parameters())) # 커지면 많이 배우는 중
 
         # Take a step of gradient descent.
         engine.optimizer.step()
